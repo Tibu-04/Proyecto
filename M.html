@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M</title>
+    <style>
+        body {
+            text-align: center;
+            background: linear-gradient(120deg, rgb(70, 130, 180), rgb(135, 206, 250));
+            font-family: 'Arial', sans-serif;
+            color: gray;
+        }
+        .card {
+            background-color: gray;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 50px auto;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 10px 0;
+            color: #ffe4e1;
+        }
+        p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+        button {
+            background-color: #ffcc00;
+            border: none;
+            color: #333333;
+            padding: 10px 20px;
+            text-transform: uppercase;
+            font-size: 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #e55a50;
+            color: #f5f5f5;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<audio autoplay loop>
+<source src="https://github.com/Tibu-04/Proyecto/blame/699f35c7ef5a619e3b12f54eff23a3ff7e92cdd1/Vida%20M%C3%ADa%20(Visualizer)%20%5BxSjD786SjwI%5D.m4a" type="audio/mpeg">
+</audio>
+
+    <div class="card">
+        <h1 style="color:#B87333;"> ¡Feliz Cumpleaños! </h1>
+        <p id="birthday-message" style="color:#466670;">Espero que tengas un día lleno de alegría y sorpresas.</p>
+        <button onclick="changeMessage()">Haz clic para un mensaje sorpresa</button>
+    </div>
+
+    <p style="font-size: 1.1rem; color: #4B4B4B; font-style: italic; margin-top: 30px; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+        Me tardé 4 horas haciendo este código, espero que te guste.
+    </p>
+
+    <img src="https://i.imgur.com/fzFEr41.jpeg" alt="Imagen decorativa" style="width: 300px; margin-top: 10px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);">
+    <script>
+        const messages = [
+            "🎂 Que este nuevo año esté lleno de éxitos y felicidad.",
+            "🌟 Eres una persona increíble",
+            "🎁 Que cada momento de este día sea tan especial como tú."
+        ];
+        let index = 0;
+
+        function changeMessage() {
+            index = (index + 1) % messages.length;
+            document.getElementById("birthday-message").textContent = messages[index];
+        }
+    </script>
+</body>
+</html>
